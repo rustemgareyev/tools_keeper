@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+  {{ title }}
+{% endblock %}
+{% block content %}
+<div class="container overflow-hidden" font-size=11>
+  <div class="row gy-5">
+    <div class="p-3 col-md-6">
+      {% for tool in empty_objects %}
+        {{ tool.name }}
+        <div><p></p></div>
+      {% endfor %}
+    </div>
+    <div class="p-3 col-md-6">
+      {% for tool in objects %}
+        {{ tool.name }}
+          <div><p></p></div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+

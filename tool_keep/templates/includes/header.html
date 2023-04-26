@@ -1,0 +1,23 @@
+{% load static %}
+<nav class="navbar navbar-dark bg-dark navbar-expand-md">
+  <div class="container-fluid">
+  <a href="{% url 'desk:index' %}" class="navbar-brand">Telestat</a>
+  <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav nav-pills">
+          <li class="nav-item"><a href="{% url 'desk:index' %}" class="nav-link">Доска</a></li>
+          {% if user.is_authenticated %}
+          <li class="nav-item"><a class="nav-link" href="">Оборудование на мне</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Сменить пароль</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Выйти</a></li>
+          <li>Пользователь: {{ user.username }}</li>
+          {% else %}
+          <li class="nav-item"><a class="nav-link" href="">Войти</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Регистрация</a></li>
+          {% endif %}
+      </ul>
+  </div>
+  </div>
+</nav>

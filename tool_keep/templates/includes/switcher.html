@@ -1,0 +1,30 @@
+<div class="container overflow-hidden" font-size=11>
+<div class="row my-3">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a 
+          class="nav-link {% if index %}active{% endif %}"
+          href="{% url 'desk:index' %}"
+        >
+          Лента
+        </a>
+      </li>
+      <li class="nav-item">
+        <a 
+           class="nav-link {% if popular %}active{% endif %}"
+           href="{% url 'desk:popular-index' %}"
+        >
+          Популярные посты
+        </a>
+      </li>
+      <li class="nav-item">
+        <a 
+          class="nav-link {% if outside %}active{% endif %}"
+          href="{% url 'desk:outside' %}"
+        >
+          Федеральные каналы
+        </a>
+      </li>
+    </ul>
+</div>
+</div>
